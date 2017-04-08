@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ssm.mapper.KehuMapper">
+    <select id="selectKehuByID" parameterType="int" resultType="com.ssm.model.Kehu">
+        select * from customersz where cid = #{id}
+    </select>
+
+    <!-- 为了返回list 类型而定义的returnMap -->
+    <resultMap type="com.ssm.model.Kehu" id="resultListKehu">
+        <id column="cid" property="id" />
+        <result column="cname" property="cname" />
+        <result column="clocation" property="clocation" />
+        <result column="cprovince" property="cprovince" />
+        <result column="ccity" property="ccity" />
+        <result column="cquxian" property="cquxian" />
+        <result column="cjiedao" property="cjiedao" />
+        <result column="cdianhua" property="cdianhua" />
+        <result column="ccreatetime" property="ccreatetime" />
+        <result column="czhuangtai" property="czhuangtai" />
+        <result column="cpingji" property="cpingji" />
+        <result column="clastviewtime" property="clastviewtime" />
+        <result column="crenwu" property="crenwu" />
+    </resultMap>
+
+    <!-- 这个select语句对应上面的resultMap -->
+    <select id="selectKehus" resultMap="resultListKehu">
+        select * from customersz
+    </select>
+</mapper>
