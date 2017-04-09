@@ -26,7 +26,7 @@
     </environments>
 
     <mappers>
-        <mapper resource="com/ssm/mapping/Kehu.xml"/>
+        <mapper resource="com/ssm/mapping/Teacher.xml"/>
     </mappers>
 
 </configuration>

@@ -4,25 +4,26 @@ package com.ssm.model;
  * Created by 35759 on 2017/4/7.
  */
 public class Kehu {
-    private int cid;
+    private String cid;
     private String cname;
     private String clocation;
-    private String cprovice;
+    private String cprovince;
     private String ccity;
     private String cquxian;
     private String cjiedao;
-    private int clianxiren;
+    private String clianxiren;
     private String cdianhua;
     private int ccreatetime;
-    private int czhuantai;
+    private int czhuangtai;
     private int cpingji;
     private int clastviewtime;
+    private String crenwu;
 
-    public int getCid() {
+    public String getCid() {
         return cid;
     }
 
-    public void setCid(int cid) {
+    public void setCid(String cid) {
         this.cid = cid;
     }
 
@@ -42,12 +43,12 @@ public class Kehu {
         this.clocation = clocation;
     }
 
-    public String getCprovice() {
-        return cprovice;
+    public String getCprovince() {
+        return cprovince;
     }
 
-    public void setCprovice(String cprovice) {
-        this.cprovice = cprovice;
+    public void setCprovince(String cprovince) {
+        this.cprovince = cprovince;
     }
 
     public String getCcity() {
@@ -74,11 +75,11 @@ public class Kehu {
         this.cjiedao = cjiedao;
     }
 
-    public int getClianxiren() {
+    public String getClianxiren() {
         return clianxiren;
     }
 
-    public void setClianxiren(int clianxiren) {
+    public void setClianxiren(String clianxiren) {
         this.clianxiren = clianxiren;
     }
 
@@ -98,12 +99,12 @@ public class Kehu {
         this.ccreatetime = ccreatetime;
     }
 
-    public int getCzhuantai() {
-        return czhuantai;
+    public int getCzhuangtai() {
+        return czhuangtai;
     }
 
-    public void setCzhuantai(int czhuantai) {
-        this.czhuantai = czhuantai;
+    public void setCzhuangtai(int czhuantai) {
+        this.czhuangtai = czhuantai;
     }
 
     public int getCpingji() {
@@ -129,6 +130,4 @@ public class Kehu {
     public void setCrenwu(String crenwu) {
         this.crenwu = crenwu;
     }
-
-    private String crenwu;
 }

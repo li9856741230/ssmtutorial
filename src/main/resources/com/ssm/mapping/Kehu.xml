@@ -3,13 +3,13 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.ssm.mapper.KehuMapper">
-    <select id="selectKehuByID" parameterType="int" resultType="com.ssm.model.Kehu">
+    <select id="selectKehuByID" parameterType="string" resultType="com.ssm.model.Kehu">
         select * from customersz where cid = #{id}
     </select>
 
     <!-- 为了返回list 类型而定义的returnMap -->
     <resultMap type="com.ssm.model.Kehu" id="resultListKehu">
-        <id column="cid" property="id" />
+        <id column="cid" property="cid" />
         <result column="cname" property="cname" />
         <result column="clocation" property="clocation" />
         <result column="cprovince" property="cprovince" />
@@ -28,4 +28,16 @@
     <select id="selectKehus" resultMap="resultListKehu">
         select * from customersz
     </select>
+
+    <update id="updateKehu" parameterType="com.ssm.model.Kehu">
+        update customersz set cname = #{cname},
+        clocation = #{clocation},
+        cprovince = #{cprovince},
+        cquxian = #{cquxian},
+        cjiedao = #{cjiedao},
+        clianxiren = #{clianxiren},
+        ccity = #{ccity},
+        cdianhua = #{cdianhua}
+        where cid = #{cid}
+    </update>
 </mapper>
